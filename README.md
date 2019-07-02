@@ -1,6 +1,9 @@
 ## Preppy Backend Starter
 Easily create a backend plugin for preppy in spring
 
+### Prereqs for Development
+Create a database in postgres and change `preppydb` to the database name in `applications.yml`
+
 ### Prereqs for production
 A database docker container must be active in order to build with docker, as environment variables must be placed to connect to the database.
 
@@ -13,7 +16,7 @@ To build the plugin run command `./gradlew build`
 2. Once build finished run command `docker run (image name in build.gradle nested in "docker") -p 8080:8080 -e (ENVIRONMENT VARIABLES HERE) `
 
 If you are using docker-compose, put this within your docker-compose.yml
-```yml
+```
 (container name here):
 	image: (plugin image name)
 	ports:
